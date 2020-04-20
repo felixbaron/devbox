@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # apt-get installation
-RUN apt-get update && apt-get install -y openssh-server curl git neovim gnupg
+RUN apt-get update && apt-get upgrade -y && apt-get install -y openssh-server python3.7 python-pip curl git neovim gnupg screen
 
 # Enable SSH server
 RUN mkdir /var/run/sshd
